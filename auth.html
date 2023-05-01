@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="auth.js"></script>
+
+<body class="main">
+  <div class="block">
+    <div class="block_content">
+      <p class="block_head_text" id="block_head_text" >Авторизация</p>
+      
+      <label class="block_label">Ваш логин</label>
+      <label id="login_error" class="block_error">Плохой логин</label>
+      <input id="auth_login" placeholder="Введите Ваш логин" required >
+      
+      <label class="block_label">Ваш пароль</label>
+      <label id="pass_error" class="block_error">Пароль должен быть длинной не меньше 8 символов и должен содержать хотя бы 1 цифру</label>
+      <input type="password" id="auth_pass" placeholder="Введите пароль" required >
+      <label id="wrong_pass" class="block_error">Неверный пароль!</label>
+      <label id="server_problems" class="block_error">К сожалению на сервере возникла проблема, попробуйте чуть позже</label>
+      
+      <button class="button" id="auth_button" onclick="authClicked();">Войти</button>
+
+      <div class="lds-dual-ring" id="loader"></div>
+      
+      <button class="button" id="register_button" onclick="goRegisterClicked();">Зарегестрироваться</button>
+    </div>
+  </div>
+</body>
+</html>
